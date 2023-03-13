@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        background-color: #f0f0f0;
+        display: flex;
+        justify-content: center;
+    }
+    section{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10%;
+    }
+    .life{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+    }
+    .life h1{
+        color: #152f46;
+        font-size: 4rem;
+        font-weight: 600;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .life p{
+        font-size: 5rem;
+        font-weight: 100;
+        font-family: sans-serif;
+    }
+    .anti-life{
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
+    #decreaseBtn{
+        width: 180px;
+        height: 35px;
+        cursor: pointer;
+        background-color: #f8f8f8;
+        border: 2px solid black;
+        letter-spacing: 3px;
+        border-radius: 8px;
+        font-size: 18px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    #decreaseBtn:hover,
+    #decreaseBtn:focus {
+       border:2px solid red;
+    }
+    #resetBtn{
+        width: 180px;
+        height: 35px;
+        background-color: #f8f8f8;
+        border: 2px solid black;
+        cursor: pointer;
+        letter-spacing: 3px;
+        border-radius: 8px;
+        font-size: 18px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    #resetBtn:hover,
+    #resetBtn:focus {
+       border:2px solid green;
+    }
+    #increaseBtn{
+        width: 180px;
+        height: 35px;
+        cursor: pointer;
+        letter-spacing: 3px;
+        background-color: #f8f8f8;
+        border: 2px solid black;
+        border-radius: 8px;
+        font-size: 18px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    #increaseBtn:hover,
+    #increaseBtn:focus {
+       border: 2px solid blue;
+    }
+    @media screen and (max-width:700px){
+        section{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 25%;
+    }
+    .life{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+    }
+    .life h1{
+        color: #152f46;
+        font-size: 4rem;
+        font-weight: 600;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .life p{
+        font-size: 5rem;
+        font-weight: 100;
+        font-family: sans-serif;
+    }
+    .anti-life{
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 20px;
+    }
+    #decreaseBtn{
+        width: 180px;
+        height: 35px;
+        cursor: pointer;
+        background-color: #f8f8f8;
+        border: 2px solid black;
+        letter-spacing: 3px;
+        border-radius: 8px;
+        font-size: 18px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    #decreaseBtn:hover,
+    #decreaseBtn:focus {
+       border:2px solid red;
+    }
+    #resetBtn{
+        width: 180px;
+        height: 35px;
+        background-color: #f8f8f8;
+        border: 2px solid black;
+        cursor: pointer;
+        letter-spacing: 3px;
+        border-radius: 8px;
+        font-size: 18px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    #resetBtn:hover,
+    #resetBtn:focus {
+       border:2px solid green;
+    }
+    #increaseBtn{
+        width: 180px;
+        height: 35px;
+        cursor: pointer;
+        letter-spacing: 3px;
+        background-color: #f8f8f8;
+        border: 2px solid black;
+        border-radius: 8px;
+        font-size: 18px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    #increaseBtn:hover,
+    #increaseBtn:focus {
+       border: 2px solid blue;
+    }
+    }
+</style>
+<body>
+    <section>
+        <div class="life">
+            <h1>Counter</h1>
+            <p id="count">0</p>
+            <div class="anti-life">
+                <button id="decreaseBtn" type="button" onclick="decrement()">DECREASE</button>
+                <button id="resetBtn" type="reset" onclick="reset()">RESET</button>
+                <button id="increaseBtn" type="button" onclick="increment()">INCREASE</button>
+            </div>
+        </div>
+    </section>
+    <script src="data.js"></script>
+</body>
+</html>
